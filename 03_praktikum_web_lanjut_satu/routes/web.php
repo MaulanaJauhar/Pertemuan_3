@@ -16,25 +16,25 @@ use App\Http\Controllers\ContactController;
 
 //No 1
 Route::get('/', function () {
-    return view('Home');
+    return view('home');
 });
 
 //No 2
-Route::prefix('products')->group(function () {
+Route::prefix('product')->group(function () {
     Route::get('/marbel_edu_games', function () {
-        return view('products')
+        return view('product')
             ->with('name', 'Marbel Edu Games');
     });
     Route::get('/marbel_and_friends_kids_games', function () {
-        return view('products')
+        return view('product')
             ->with('name', 'Marbel and Friends Kids Games');
     });
     Route::get('/riri_story_books', function () {
-        return view('products')
+        return view('product')
             ->with('name', 'Riri Story Books');
     });
     Route::get('/kolak_kids_songs', function () {
-        return view('products')
+        return view('product')
             ->with('name', 'Kolak Kids Songs');
     });
 });
